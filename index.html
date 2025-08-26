@@ -20,7 +20,7 @@
 
       .subject-container {
         width: 90%;
-        max-width: 600px; /* Increased width slightly */
+        max-width: 600px;
         background: #ffffff;
         padding: 25px 30px;
         border-radius: 15px;
@@ -55,6 +55,8 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+        /* 🚨 FIX: Apply font to the button class */
+        font-family: "Hind Siliguri", sans-serif;
       }
 
       .dropdown-btn:hover {
@@ -62,7 +64,7 @@
       }
 
       .dropdown-btn:active {
-        transform: scale(0.99); /* Slight press effect */
+        transform: scale(0.99);
       }
 
       /* Arrow Icon using a pseudo-element */
@@ -70,7 +72,7 @@
         content: "▶";
         font-size: 12px;
         transform: rotate(0deg);
-        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy effect */
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
       }
 
       /* Rotate arrow when dropdown is active/open */
@@ -81,20 +83,16 @@
       /* --- Dropdown Content & Animation --- */
       .dropdown-content {
         background-color: #f9f9f9;
-        /* Hide content by default */
         max-height: 0;
         overflow: hidden;
         margin-top: 5px;
         border-radius: 10px;
         box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.05);
-        /* Smooth transition for the slide-down effect */
-        transition: max-height 0.8s ease-in-out; /* Slightly slower for longer lists */
+        transition: max-height 0.8s ease-in-out;
       }
 
       /* Class added by JavaScript to show the content */
       .dropdown-content.show {
-        /* Increased max-height to accommodate 60+ topics.
-       This value should be larger than the height of your longest topic list. */
         max-height: 2000px;
       }
 
@@ -106,6 +104,8 @@
         display: block;
         transition: background-color 0.2s ease, padding-left 0.2s ease;
         border-bottom: 1px solid #e0e0e0;
+        /* 🚨 FIX: Apply font to the links */
+        font-family: "Hind Siliguri", sans-serif;
       }
 
       .dropdown-content a:last-child {
@@ -122,14 +122,13 @@
   <body>
     <div class="subject-container" id="subject-menu">
       <h1>বোটানি</h1>
-      <!-- The dropdown menu will be dynamically generated here -->
-    </div>
+      </div>
 
     <script>
       const chaptersData = [
         {
           id: "ch1",
-          title: "অধ্যায়-১: কোষ ও তার গঠন",
+          title: "অধ্যায়-১: কোষ ও তার গঠন",
           topics: [
             {
               title: "১.১ - কোষ ও একটি আদর্শ উদ্ভিদ কোষের গঠন",
@@ -152,7 +151,7 @@
               url: "https://medicalprostuti.github.io/b5/",
             },
             {
-              title: "১.৬ - মাইটোকন্ডিয়া",
+              title: "১.৬ - মাইটোকন্ডিয়া",
               url: "https://medicalprostuti.github.io/b6/",
             },
             {
@@ -160,11 +159,11 @@
               url: "https://medicalprostuti.github.io/b7/",
             },
             {
-              title: "১.৮ - সেন্ট্রিওল, সাইটোস্কেলিটন ও কতিপয় কোষ অঙানু",
+              title: "১.৮ - সেন্ট্রিওল, সাইটোস্কেলিটন ও কতিপয় কোষ অঙানু",
               url: "https://medicalprostuti.github.io/b8/",
             },
             {
-              title: "১.৯ - নিউক্লিয়াস",
+              title: "১.৯ - নিউক্লিয়াস",
               url: "https://medicalprostuti.github.io/b9/",
             },
             {
@@ -179,7 +178,7 @@
         },
         {
           id: "ch2",
-          title: "অধ্যায়-২: কোষ কিভাজন",
+          title: "অধ্যায়-২: কোষ কিভাজন",
           topics: [
             {
               title: "২.১ - ভূমিকা ও অ্যামাইটোসিস",
@@ -194,14 +193,14 @@
               url: "https://medicalprostuti.github.io/b14/",
             },
             {
-              title: "২.৪ - মায়োসিস ও ক্রসিং ওভার",
+              title: "২.৪ - মায়োসিস ও ক্রসিং ওভার",
               url: "https://medicalprostuti.github.io/b15/",
             },
           ],
         },
         {
           id: "ch3",
-          title: "অধ্যায়-৩: কোষ রসায়ন",
+          title: "অধ্যায়-৩: কোষ রসায়ন",
           topics: [
             {
               title: "৩.১ - কার্বহাইড্রেড",
@@ -227,7 +226,7 @@
         },
         {
           id: "ch4",
-          title: "অধ্যায়-৪: অনুজীব",
+          title: "অধ্যায়-৪: অনুজীব",
           topics: [
             {
               title: "৪.১ - ভাইরাস",
@@ -238,18 +237,18 @@
               url: "https://medicalprostuti.github.io/b22/",
             },
             {
-              title: "৪.৩ - ব্যাকটেরিয়া",
+              title: "৪.৩ - ব্যাকটেরিয়া",
               url: "https://medicalprostuti.github.io/b23/",
             },
             {
-              title: "৪.৪ - ম্যালেরিয়া",
+              title: "৪.৪ - ম্যালেরিয়া",
               url: "https://medicalprostuti.github.io/b24/",
             },
           ],
         },
         {
           id: "ch5",
-          title: "অধ্যায়-৫: শৈবাল ও ছত্রাক",
+          title: "অধ্যায়-৫: শৈবাল ও ছত্রাক",
           topics: [
             {
               title: "৫.১ - উলোথ্রিক্স",
@@ -267,14 +266,14 @@
         },
         {
           id: "ch6",
-          title: "অধ্যায়-৬: ব্রায়োফাইটা ও টেরিডো ফাইটা",
+          title: "অধ্যায়-৬: ব্রায়োফাইটা ও টেরিডো ফাইটা",
           topics: [
             {
-              title: "৬.১ - ব্রায়োফাইটা",
+              title: "৬.১ - ব্রায়োফাইটা",
               url: "https://medicalprostuti.github.io/b28/",
             },
             {
-              title: "৬.২ - রিকশিয়া",
+              title: "৬.২ - রিকশিয়া",
               url: "https://medicalprostuti.github.io/b29/",
             },
             {
@@ -285,7 +284,7 @@
         },
         {
           id: "ch7",
-          title: "অধ্যায়-৭: নগ্নবীজি ও অবৃতবিজী",
+          title: "অধ্যায়-৭: নগ্নবীজি ও অবৃতবিজী",
           topics: [
             {
               title: "৭.১ - নগ্নবীজী উদ্ভিদ",
@@ -311,14 +310,14 @@
         },
         {
           id: "ch8",
-          title: "অধ্যায়-৮: টিস্যু ও টিস্যুতন্ত্র",
+          title: "অধ্যায়-৮: টিস্যু ও টিস্যুতন্ত্র",
           topics: [
             {
-              title: "৮.১ - স্থায়ী টিস্যু",
+              title: "৮.১ - স্থায়ী টিস্যু",
               url: "https://medicalprostuti.github.io/b36/",
             },
             {
-              title: "৮.২ - ত্বকীয় টিস্যুতন্ত্র",
+              title: "৮.২ - ত্বকীয় টিস্যুতন্ত্র",
               url: "https://medicalprostuti.github.io/b37/",
             },
             {
@@ -337,7 +336,7 @@
         },
         {
           id: "ch9",
-          title: "অধ্যায়-৯: উদ্ভিদ শারীরতত্ত্ব",
+          title: "অধ্যায়-৯: উদ্ভিদ শারীরতত্ত্ব",
           topics: [
             {
               title: "৯.১ - প্রস্বেদন",
@@ -355,7 +354,7 @@
         },
         {
           id: "ch10",
-          title: "অধ্যায়-১০: উদ্ভিদের প্রজনন",
+          title: "অধ্যায়-১০: উদ্ভিদের প্রজনন",
           topics: [
             {
               title: "১০.১ - পুং গ্যামিটো ফাইটের বৃদ্ধি",
@@ -378,14 +377,14 @@
               url: "https://medicalprostuti.github.io/b48/",
             },
             {
-              title: "১০.৬ -  উদ্ভিদের কৃত্তিম প্রজনন",
+              title: "১০.৬ -  উদ্ভিদের কৃত্তিম প্রজনন",
               url: "https://medicalprostuti.github.io/b49/",
             },
           ],
         },
         {
           id: "ch11",
-          title: "অধ্যায়-১১: জীব প্রযুক্তি",
+          title: "অধ্যায়-১১: জীব প্রযুক্তি",
           topics: [
             {
               title: "১১.১ - জীব প্রযুক্তি",
@@ -396,7 +395,7 @@
               url: "https://medicalprostuti.github.io/b51/",
             },
             {
-              title: "১১.৩ - জেনেটিক ইঞ্জিনিয়ারিং",
+              title: "১১.৩ - জেনেটিক ইঞ্জিনিয়ারিং",
               url: "https://medicalprostuti.github.io/b52/",
             },
             {
@@ -404,21 +403,21 @@
               url: "https://medicalprostuti.github.io/b53/",
             },
             {
-              title: "১১.৫ - জিনোম সিকুয়েন্স",
+              title: "১১.৫ - জিনোম সিকুয়েন্স",
               url: "https://medicalprostuti.github.io/b54/",
             },
           ],
         },
         {
           id: "ch12",
-          title: "অধ্যায়-১২: জীবের পরিবেশ, বিস্তার ও সংরক্ষণ",
+          title: "অধ্যায়-১২: জীবের পরিবেশ, বিস্তার ও সংরক্ষণ",
           topics: [
             {
               title: "১২.১ - জীবের অভিযোজন",
               url: "https://medicalprostuti.github.io/b55/",
             },
             {
-              title: "১২.২ - বায়োম",
+              title: "১২.২ - বায়োম",
               url: "https://medicalprostuti.github.io/b56/",
             },
             {
@@ -430,7 +429,7 @@
               url: "https://medicalprostuti.github.io/b58/",
             },
             {
-              title: "১২.৫ - বাংলাদেশে বিলুপ্তপ্রায় জীবের পরিচিতি",
+              title: "১২.৫ - বাংলাদেশে বিলুপ্তপ্রায় জীবের পরিচিতি",
               url: "https://medicalprostuti.github.io/b59/",
             },
             {
@@ -439,31 +438,23 @@
             },
           ],
         },
-
-        // Add more chapters as needed
       ];
 
       document.addEventListener("DOMContentLoaded", function () {
         const menuContainer = document.getElementById("subject-menu");
 
-        // --- 1. Function to Generate the Menu ---
         function generateMenu() {
-          // Loop through each chapter in the data object
           chaptersData.forEach((chapter) => {
-            // Create the main container for the dropdown
             const dropdownDiv = document.createElement("div");
             dropdownDiv.className = "dropdown";
 
-            // Create the button for the chapter
             const button = document.createElement("button");
             button.className = "dropdown-btn";
             button.textContent = chapter.title;
 
-            // Create the container for the topics
             const contentDiv = document.createElement("div");
             contentDiv.className = "dropdown-content";
 
-            // Loop through the topics for the current chapter
             chapter.topics.forEach((topic) => {
               const link = document.createElement("a");
               link.textContent = topic.title;
@@ -471,16 +462,13 @@
               contentDiv.appendChild(link);
             });
 
-            // Assemble the parts
             dropdownDiv.appendChild(button);
             dropdownDiv.appendChild(contentDiv);
 
-            // Add the completed dropdown to the main container
             menuContainer.appendChild(dropdownDiv);
           });
         }
 
-        // --- 2. Function to Add Event Listeners ---
         function attachEventListeners() {
           const allDropdownBtns =
             menuContainer.querySelectorAll(".dropdown-btn");
@@ -490,16 +478,13 @@
               const currentContent = this.nextElementSibling;
               const isAlreadyOpen = this.classList.contains("active");
 
-              // First, close all other dropdowns
               allDropdownBtns.forEach((otherBtn) => {
                 if (otherBtn !== this) {
-                  // Don't close the one we are interacting with yet
                   otherBtn.classList.remove("active");
                   otherBtn.nextElementSibling.classList.remove("show");
                 }
               });
 
-              // Toggle the clicked dropdown
               this.classList.toggle("active");
               currentContent.classList.toggle("show");
 
@@ -507,9 +492,7 @@
             });
           });
 
-          // Optional: Close dropdowns if clicking outside
           window.addEventListener("click", function (event) {
-            // Check if the click was outside of any dropdown button
             if (!event.target.matches(".dropdown-btn")) {
               allDropdownBtns.forEach((btn) => {
                 btn.classList.remove("active");
@@ -519,7 +502,6 @@
           });
         }
 
-        // --- 3. Initialize the Menu ---
         generateMenu();
         attachEventListeners();
       });
